@@ -26,3 +26,13 @@ fetch(proxyUrl + targetUrl)
       
     }
   });
+  var colorWell;
+  var defaultColor = "#fabada";
+  window.addEventListener("load", startup, false);
+  function startup() {
+    colorWell = document.querySelector("#colorWell");
+    colorWell.value = defaultColor;
+    colorWell.addEventListener("input", updateFirst, false);
+    colorWell.addEventListener("change", updateAll, false);
+    colorWell.select();
+  }
