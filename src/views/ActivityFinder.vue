@@ -1,12 +1,10 @@
 <template>
   <div class="activityfinder">
     <h2>Here's a Random Activity!</h2>
-    <p>Activity: {{ results.activity }}</p>
+    <!-- <p>Activity: {{ results.activity }}</p> -->
     <p>Type: {{ results.type }}</p>
-    <p>Price: {{ results.price }}</p>
-    <!-- <form v-on:submit.prevent="findWords">
-      <p>Find rhymes for <input type="text" v-model="rhyme"> related to <input type="text" v-model="phrase"> <button type="submit">Search</button></p>
-    </form> -->
+    <!-- <p>Price: {{ results.price }}</p> -->
+    <activity-type></activity-type>
     <ul class="results" v-if="results && results.length > 0">
       <li class="item" v-for="(item,index) of results" :key="index">
         <p><strong> {{item.word}}</strong></p>
@@ -25,9 +23,14 @@
 <script>
 // Imported axios
 import axios from 'axios';
+import ActivityType from '@/components/ActivityType'
 
 export default {
   name: 'ActivityFinder',
+  components: {
+    'activity-type': ActivityType
+  },
+
   data () {
     return {
       results: null,
@@ -40,6 +43,7 @@ export default {
       })
       .then(response =>{
         this.results = response.data
+        console.log(this.results)
       })
       .catch(error =>{
         this.errors.push(error)
