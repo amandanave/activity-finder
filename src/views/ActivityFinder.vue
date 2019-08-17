@@ -1,6 +1,6 @@
 <template>
   <div class="activityfinder">
-    <h2>Here's a Random Activity!</h2>
+    <h2>Bored? Here's a Random Activity!</h2>
     <div v-if="results">
       <p>Activity: {{ results.activity }}</p>
       <p>Type: {{ results.type }}</p>
