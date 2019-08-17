@@ -1,16 +1,19 @@
 <template>
   <div class="activityfinder">
     <h2>Here's a Random Activity!</h2>
-    <!-- <p>Activity: {{ results.activity }}</p> -->
-    <p>Type: {{ results.type }}</p>
-    <!-- <p>Price: {{ results.price }}</p> -->
+    <div v-if="results">
+      <p>Activity: {{ results.activity }}</p>
+      <p>Type: {{ results.type }}</p>
+      <p>Participants: {{ results.participants }}</p>
+    </div>
     <activity-type></activity-type>
-    <ul class="results" v-if="results && results.length > 0">
+
+    <!-- <ul class="results" v-if="results && results.length > 0">
       <li class="item" v-for="(item,index) of results" :key="index">
         <p><strong> {{item.word}}</strong></p>
         <p>{{item.score}}</p>
       </li>
-    </ul>
+    </ul> -->
 
      <ul class="errors" v-if="errors && errors.length > 0">
       <li v-for="(error, index) of errors" :key="index">

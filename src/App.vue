@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Color Scheme Generator</h1>
+    <h1>Activity Generator</h1>
     <router-view/>
   </div>
 </template>

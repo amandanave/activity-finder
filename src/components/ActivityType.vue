@@ -34,11 +34,10 @@ export default {
   },
 
   methods: {
-      findWords: function(){
-      axios.get('https://api.datamuse.com/words', {
+      activityForm: function(){
+      axios.get('https://www.boredapi.com/api/activity', {
         params: {
-          ml: this.phrase,
-          rel_rhy:this.rhyme
+          selected: this.type,
         }
       })
       .then(response =>{
