@@ -1,12 +1,12 @@
 <template>
   <div class="activityfinder">
+    <activity-type></activity-type>
     <h2>Bored? Here's a Random Activity!</h2>
     <div v-if="results">
       <p>Activity: {{ results.activity }}</p>
       <p>Type: {{ results.type }}</p>
       <p>Participants: {{ results.participants }}</p>
     </div>
-    <activity-type></activity-type>
 
     <!-- <ul class="results" v-if="results && results.length > 0">
       <li class="item" v-for="(item,index) of results" :key="index">

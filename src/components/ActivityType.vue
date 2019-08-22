@@ -1,6 +1,6 @@
 <template>
   <div class="activitytype">
-      <h2>Choose Your Activity Type:</h2>
+      <h2>Choose Your Activity Type Below:</h2>
       <form v-on:submit.prevent="activityForm">
           <select v-model="selected">
               <option disabled value="">Please select one</option>
@@ -16,6 +16,9 @@
           </select>
           <button type="submit">Search</button>
       </form>
+      <div v-if="results">
+      <p>{{ results.activity }}</p>
+    </div>
   </div>
 </template>
 
