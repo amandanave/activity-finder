@@ -7,14 +7,7 @@
       <p>Type: {{ results.type }}</p>
       <p>Participants: {{ results.participants }}</p>
     </div>
-
-    <!-- <ul class="results" v-if="results && results.length > 0">
-      <li class="item" v-for="(item,index) of results" :key="index">
-        <p><strong> {{item.word}}</strong></p>
-        <p>{{item.score}}</p>
-      </li>
-    </ul> -->
-
+    
      <ul class="errors" v-if="errors && errors.length > 0">
       <li v-for="(error, index) of errors" :key="index">
         {{error.message}}

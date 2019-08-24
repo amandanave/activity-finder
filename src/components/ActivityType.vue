@@ -1,5 +1,6 @@
 <template>
   <div class="activitytype">
+    <i class="fas fa-hiking fa-3x"></i>
       <h2>Choose Your Activity Type Below:</h2>
       <form v-on:submit.prevent="activityForm">
           <select v-model="selected">
