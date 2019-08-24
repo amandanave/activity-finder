@@ -14,7 +14,7 @@
               <option>Music</option>
               <option>Busywork</option>
           </select>
-          <button type="submit">Search</button>
+          <button type="submit">Pick Something!</button>
       </form>
       <div v-if="results">
       <p>{{ results.activity }}</p>

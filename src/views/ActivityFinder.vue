@@ -1,7 +1,7 @@
 <template>
   <div class="activityfinder">
     <activity-type></activity-type>
-    <h2>Bored? Here's a Random Activity!</h2>
+    <h2>Can't decide? Here's a Random Activity!</h2>
     <div v-if="results">
       <p>Activity: {{ results.activity }}</p>
       <p>Type: {{ results.type }}</p>
@@ -20,6 +20,8 @@
         {{error.message}}
       </li>
     </ul>
+    <br>
+    <p><router-link to="/about">About</router-link></p>
   </div>
 </template>
 
