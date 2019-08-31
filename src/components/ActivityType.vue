@@ -74,5 +74,4 @@ ul.errors {
   padding: 0.5rem;
   margin: 10px 0;
 }
-
 </style>

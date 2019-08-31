@@ -13,36 +13,6 @@
 </template>
 
 <script>
-// Imported axios
-// import axios from 'axios';
-
-// export default {
-//   name: 'Pokeimage',
-//   data () {
-//     return {
-//       results: null,
-//       errors: [],
-//       item: null,
-//       image: ""
-//     }
-//     },
-//     created: function () {
-//         this.item = this.$route.params.item;
-//         console.log(this.item)
-//         axios.get(this.item.url, {
-//         params: {
-//           limit: 151
-//         }
-//       })
-//       .then(response =>{
-//         this.results = response.data
-//         this.image = this.results.sprites.front_default
-//       })
-//       .catch(error =>{
-//         this.errors.push(error)
-//       })
-//     }
-// }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -51,5 +21,6 @@
    text-align: center;
    padding: 0px 200px;
  }
+
 
 </style>
